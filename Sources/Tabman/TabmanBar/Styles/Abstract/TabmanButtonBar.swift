@@ -221,11 +221,11 @@ internal class TabmanButtonBar: TabmanBar {
                 if resizedImage.size != .zero {
                     button.setImage(resizedImage.withRenderingMode(imageRenderingMode), for: .normal)
                 }
-                button.setTitle(title, for: .normal)
+                button.setAttributedTitle(title, for: .normal)
                 // Nudge it over a little bit
                 button.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 5.0, bottom: 0.0, right: 0.0)
             } else if let title = item.title {
-                button.setTitle(title, for: .normal)
+                button.setAttributedTitle(title, for: .normal)
             } else if let image = item.image {
                 // resize images to fit
                 let resizedImage = image.resize(toSize: Defaults.itemImageSize)

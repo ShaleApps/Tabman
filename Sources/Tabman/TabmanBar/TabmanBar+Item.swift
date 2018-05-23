@@ -16,7 +16,7 @@ public extension TabmanBar {
         // MARK: Properties
         
         /// The title to display for the item.
-        public private(set) var title: String?
+        public private(set) var title: NSAttributedString?
         /// The image to display for the item.
         public private(set) var image: UIImage?
 		/// Context of the item for external reference.
@@ -32,7 +32,7 @@ public extension TabmanBar {
         ///
         /// - Parameter title: The title to display.
         /// - Parameter context: Object that can be used to provide external context for the item.
-		public init(title: String, context: Any? = nil) {
+		public init(title: NSAttributedString, context: Any? = nil) {
             self.title = title
 			self.context = context
         }
@@ -51,7 +51,7 @@ public extension TabmanBar {
         /// - Parameter title: The title to display.
         /// - Parameter image: Image to display.
         /// - Parameter context: Object that can be used to provide external context for the item.
-        public init(title: String, image: UIImage, context: Any? = nil) {
+        public init(title: NSAttributedString, image: UIImage, context: Any? = nil) {
             self.title = title
             self.image = image
 			self.context = context
